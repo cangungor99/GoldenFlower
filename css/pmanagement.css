@@ -1,0 +1,56 @@
+body {
+    
+    background-size: cover;
+  }
+  
+  .blur {
+   
+    background-size: cover;
+    overflow: hidden;
+    filter: blur(8px);
+    position: absolute;
+    height: 460px;
+    top: 70px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    z-index: -2;
+  }
+  
+  fieldset {
+     font-family: 'Permanent Marker', cursive;
+    font-size:1.5em;
+    line-height: 40px;
+      width: 65%;
+      padding: 30px;
+      margin: 90px auto;
+      border: white solid 2.5px;
+    -webkit-animation-name: color; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+      -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+      animation-name: color;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+  }
+  
+  @-webkit-keyframes color {
+      from {color: white;}
+      to {color: yellow;}
+  }
+  
+  /* Standard syntax */
+  @keyframes color {
+      from {color: white;}
+      to {color: yellow;}
+  }
+  
+  legend {
+    font-family: 'Permanent Marker', cursive;
+      font-size: 1.8em;
+    -webkit-animation-name: color; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+      -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+      animation-name: color;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+  }

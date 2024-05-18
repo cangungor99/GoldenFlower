@@ -1,0 +1,83 @@
+@import "bourbon";
+
+$bg-tan: #efeae1;
+$atom-color: #66595C; 
+
+@mixin flexy($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+* {
+  @include box-sizing(border-box);  
+}
+
+body {
+  background: $bg-tan;  
+  @include flexy(column);
+}
+
+header {
+  @include flexy();
+  font-family: 'museo-sans-rounded', sans-serif;
+  font-size: 3em;
+  color: $atom-color;
+  position: relative;
+  height: 4em;
+  width: intrinsic;
+  //margin: 0 auto;
+  
+  h1 {
+    letter-spacing: .2em;
+    font-weight: 100;
+    
+    span[class*='char'] {
+        display: inline-block;
+    }
+    
+    .char1 {
+      @include transform(scale(1.2,1)); 
+    }
+    
+    .char3 {
+      padding: 0 .15em 0 .1em;
+      visibility: hidden;
+    }
+  }
+}
+.hide {
+  visibility: hidden;
+  position: relative;
+  left: 9999px;
+  display: none;
+}
+
+#svg {
+  position: absolute;
+  right: 1.79em;
+  bottom: .4em;
+  height: 4.4em;
+  width: 3.5em;
+  @include transform(scale(.93));
+}
+
+path#ring, circle#base {
+  stroke: $atom-color;
+  stroke-width: 4px;
+  fill: none;
+  position: absolute;
+}
+
+circle#base {
+  stroke-width: 5px;
+}
+
+#second, #third {
+  @extend #ring;
+}
+
+#second {
+  @include transform(translateX(-73px) translateY(150px) rotate(-65deg));
+}

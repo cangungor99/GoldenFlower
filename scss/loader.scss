@@ -1,0 +1,15 @@
+@keyframes drop-3 {
+    from{
+        animation-timing-function: steps(1,end);
+        transform: translate(0,0);
+        visibility: hidden;
+    }
+    78%{
+        animation-timing-function: linear;
+        transform: translate(0,0);
+        visibility: visible;
+    }
+    98%{
+        transform: translate(-24px,0);
+    }
+}
